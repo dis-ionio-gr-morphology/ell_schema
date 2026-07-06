@@ -9,14 +9,13 @@ PREFIX : <http://mmoon.org/ell/inventory/omg/>
 
 CONSTRUCT {
   ?sourceWord ell_schema:generates ?targetWord .
-
   ?sourceWord mmoon:orthographicRepresentation ?sourceOrth.
-  ?targetWord mmoon:orthographicRepresentation ?targetOrth.
+  ?targetWord mmoon:orthographicRepresentation ?targetOrth .
+    ?drvPattern ell_schema:relatesTo ?derivationRule .
 }
 WHERE {
   ?drvPattern ell_schema:hasSourceWP ?sourceWP ;
               ell_schema:hasTargetWP ?targetWP .
-
   ?sourceWord ell_schema:isMappedTo ?sourceWP ;
               ell_schema:hasBase ?base ;
               mmoon:orthographicRepresentation ?sourceOrth .
@@ -24,6 +23,8 @@ WHERE {
   ?targetWord ell_schema:isMappedTo ?targetWP ;
               ell_schema:hasBase ?base ;
               mmoon:orthographicRepresentation ?targetOrth .
+    ?drvPattern ell_schema:relatesTo ?derivationRule .
+    
 
   FILTER(?sourceWord != ?targetWord)
 }

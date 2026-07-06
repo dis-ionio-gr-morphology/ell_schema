@@ -15,7 +15,7 @@ CONSTRUCT {
            ell_schema:isMappedTo ?wp ;
            mmoon:orthographicRepresentation ?generatedForm ;
            ell_schema:hasBase ?base ;
-           ell_schema:relatesTo ?derivationRule .
+          
 }
 
 WHERE {
@@ -24,7 +24,6 @@ WHERE {
       ell_schema:consistsOfInfSuf ?affix .
   ?stemPattern ell_schema:isMappedTo ?stem ;
                ell_schema:consistsOfDerSuf ?derAff .
-  ?derivationRule ell_schema:involves ?derAff .
   ?stem mmoon:orthographicRepresentation ?stemForm ;
         ell_schema:hasBase ?base .
   ?affix mmoon:orthographicRepresentation ?affixForm .
@@ -35,6 +34,7 @@ WHERE {
           STR(?affixForm)
       ) AS ?generatedForm
   )
+
   BIND(
       IRI(
           CONCAT(
@@ -45,4 +45,5 @@ WHERE {
           )
       ) AS ?wordIRI
   )
+
 }

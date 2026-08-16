@@ -11680,7 +11680,7 @@ owl:Thing rdfs:comment "The class of OWL individuals." ;
 :ρυθμ-ίζ-AL1_1_1 rdf:type owl:NamedIndividual ,
                           mmoon:Stem ;
                  mmoon:consistsOfStem :ρυθμ- ;
-                 ell_schema:consistsOfDerSuf <http://mmoon.org/ell/inventory/omg/-ίζ-AL1_1_1> ;
+                 ell_schema:consistsOfDerSuf :_-ίζ-AL1_1_1 ;
                  ell_schema:hasBase :b_rythm ;
                  ell_schema:isMappedTo :X-ίζ- ;
                  mmoon:orthographicRepresentation "ρυθμίζ" .
@@ -11690,7 +11690,7 @@ owl:Thing rdfs:comment "The class of OWL individuals." ;
 :ρυθμ-ισ-AL2_1_1 rdf:type owl:NamedIndividual ,
                           mmoon:Stem ;
                  mmoon:consistsOfStem :ρυθμ- ;
-                 ell_schema:consistsOfDerSuf <http://mmoon.org/ell/inventory/omg/-ισ-AL2_1_1> ;
+                 ell_schema:consistsOfDerSuf :_-ισ-AL2_1_1 ;
                  ell_schema:hasBase :b_rythm ;
                  ell_schema:isMappedTo :X-ισ- ;
                  mmoon:orthographicRepresentation "ρυθμισ" .
@@ -11769,7 +11769,7 @@ owl:Thing rdfs:comment "The class of OWL individuals." ;
 :χορ-εύ-AL1_1_1 rdf:type owl:NamedIndividual ,
                          mmoon:Stem ;
                 mmoon:consistsOfStem :χορ- ;
-                ell_schema:consistsOfDerSuf <http://mmoon.org/ell/inventory/omg/-εύ-AL1_1_1> ;
+                ell_schema:consistsOfDerSuf :_-εύ-AL1_1_1 ;
                 ell_schema:hasBase :b_xor ;
                 ell_schema:isMappedTo :X-εύ-1 ;
                 mmoon:orthographicRepresentation "χορεύ" .
@@ -11792,22 +11792,6 @@ owl:Thing rdfs:comment "The class of OWL individuals." ;
        mmoon:consistsOfStem :χορ- ;
        ell_schema:consistsOfInfSuf :_-όςAL2_1_1 ;
        mmoon:orthographicRepresentation "χορός" .
-
-
-###  http://mmoon.org/ell/inventory/omg/-ίζ-AL1_1_1
-<http://mmoon.org/ell/inventory/omg/-ίζ-AL1_1_1> rdf:type owl:NamedIndividual .
-
-
-###  http://mmoon.org/ell/inventory/omg/-ευ-AL2_1_1
-<http://mmoon.org/ell/inventory/omg/-ευ-AL2_1_1> rdf:type owl:NamedIndividual .
-
-
-###  http://mmoon.org/ell/inventory/omg/-εύ-AL1_1_1
-<http://mmoon.org/ell/inventory/omg/-εύ-AL1_1_1> rdf:type owl:NamedIndividual .
-
-
-###  http://mmoon.org/ell/inventory/omg/-ισ-AL2_1_1
-<http://mmoon.org/ell/inventory/omg/-ισ-AL2_1_1> rdf:type owl:NamedIndividual .
 
 
 #################################################################

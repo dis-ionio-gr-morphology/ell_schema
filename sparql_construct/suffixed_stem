@@ -11,14 +11,14 @@ CONSTRUCT {
            mmoon:consistsOfStem ?stem ;
            ell_schema:consistsOfDerSuf  ?affix ;
            mmoon:orthographicRepresentation ?generatedForm ;
-           ell_schema:isMappedTo ?stemPattern ;
+           ell_schema:isMappedTo ?stemPattern2 ;
     	   ell_schema:hasBase ?base	.
 }
 WHERE {
-  ?stemPattern ell_schema:consistsOfDerSuf ?affix ;
-               ell_schema:consistsOfStemPattern ?basePattern .
+  ?stemPattern2 ell_schema:consistsOfDerSuf ?affix ;
+               ell_schema:consistsOfStemPattern ?stemPattern1 .
 
-  ?basePattern ell_schema:isMappedTo ?stem .
+  ?stemPattern1 ell_schema:isMappedTo ?stem .
   ?stem ell_schema:hasBase ?base ;  
         mmoon:orthographicRepresentation ?stemForm .
   ?affix mmoon:orthographicRepresentation ?affixForm ;

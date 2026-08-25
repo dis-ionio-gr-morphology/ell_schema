@@ -9,65 +9,25 @@
 @base <http://mmoon.org/ell/inventory/omg/> .
 
 <http://mmoon.org/ell/inventory/omg/> rdf:type owl:Ontology ;
-                                       <http://purl.org/dc/elements/1.1/contributor> "Marco Ocana" ,
-                                                                                     "Paolo Ciccarese" ,
-                                                                                     "Silvio Peroni" ;
-                                       <http://purl.org/dc/elements/1.1/creator> <http://www.paolociccarese.info> ,
-                                                                                 <http://aksw.org/BettinaKlimek.rdf> ,
-                                                                                 "Silvio Peroni" ;
-                                       <http://purl.org/dc/elements/1.1/date> "2010-11-29"^^xsd:date ,
-                                                                              "March 19, 2012" ;
-                                       <http://purl.org/dc/elements/1.1/description> """The Error Ontology is an unit test that allow to produce an inconsistent model if a particular (and incorrect) situation happens.
 
-It works by means of a data property, \"hasError\" that denies its usage for ant resource. In fact, by defining its domain as \"all those resource that don't have any hasErrorDescription assertion\", a resource that asserts having an error makes the ontology inconsistent."""@en ,
-                                                                                     """The Multilingual Morpheme Ontology (MMoOn) is  an ontological model that contains the vocabulary needed to describe the morphological elements, meanings and representations of natural languages.
+    <http://purl.org/dc/elements/1.1/description>
+        """The Multilingual Morpheme Ontology (MMoOn) is an ontological model that contains the vocabulary needed to describe the morphological elements, meanings and representations of natural languages.
 
-This is the reference ontology from which various language specific MMoOn Inventories can be derived."""@en ,
-                                                                                     "This is the RDF Schema for the RDF vocabulary terms in the RDF Namespace, defined in RDF 1.1 Concepts." ;
-                                       <http://purl.org/dc/elements/1.1/format> "application/rdf+xml" ;
-                                       <http://purl.org/dc/elements/1.1/identifier> "http://mmoon.org/mmoon/core/v1.0.0/"^^xsd:anyURI ;
-                                       <http://purl.org/dc/elements/1.1/language> "en" ;
-                                       <http://purl.org/dc/elements/1.1/rights> "This work is distributed under a Creative Commons Attribution Licence (http://creativecommons.org/licenses/by/3.0/)."@en ;
-                                       <http://purl.org/dc/elements/1.1/title> """The Collections Ontology
-(CO)"""@en ,
-                                                                               """The Error Ontology
-Making contraints on ontology resources"""@en ,
-                                                                               "The Multilingual Morpheme Ontology"@en ,
-                                                                               "The OWL 2 Schema vocabulary (OWL 2)" ,
-                                                                               "The RDF Concepts Vocabulary (RDF)" ,
-                                                                               "The RDF Schema vocabulary (RDFS)" ;
-                                       <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
-                                       rdfs:comment """
-  This ontology partially describes the built-in classes and
-  properties that together form the basis of the RDF/XML syntax of OWL 2.
-  The content of this ontology is based on Tables 6.1 and 6.2
-  in Section 6.4 of the OWL 2 RDF-Based Semantics specification,
-  available at http://www.w3.org/TR/owl2-rdf-based-semantics/.
-  Please note that those tables do not include the different annotations
-  (labels, comments and rdfs:isDefinedBy links) used in this file.
-  Also note that the descriptions provided in this ontology do not
-  provide a complete and correct formal description of either the syntax
-  or the semantics of the introduced terms (please see the OWL 2
-  recommendations for the complete and normative specifications).
-  Furthermore, the information provided by this ontology may be
-  misleading if not used with care. This ontology SHOULD NOT be imported
-  into OWL ontologies. Importing this file into an OWL 2 DL ontology
-  will cause it to become an OWL 2 Full ontology and may have other,
-  unexpected, consequences.
-   """ ;
-                                       rdfs:isDefinedBy <http://www.w3.org/TR/owl2-mapping-to-rdf/> ,
-                                                        <http://www.w3.org/TR/owl2-rdf-based-semantics/> ,
-                                                        <http://www.w3.org/TR/owl2-syntax/> ;
-                                       rdfs:label "Error Ontology"@en ,
-                                                  "Multilingual Morpheme Ontology"@en ;
-                                       rdfs:seeAlso <http://www.w3.org/2000/01/rdf-schema-more> ,
-                                                    <http://www.w3.org/TR/owl2-rdf-based-semantics/#table-axiomatic-classes> ,
-                                                    <http://www.w3.org/TR/owl2-rdf-based-semantics/#table-axiomatic-properties> ;
-                                       owl:versionInfo "Version 1.0, 2016. Created and maintained by Bettina Klimek."@en ,
-                                                       "$Date: 2009/11/15 10:54:12 $" ,
-                                                       "1.0" ,
-                                                       "2.0" ;
-                                       <http://www.w3.org/2003/g/data-view#namespaceTransformation> <http://dev.w3.org/cvsweb/2009/owl-grddl/owx2rdf.xsl> .
+This is the reference ontology from which various language specific MMoOn Inventories can be derived."""@en ;
+
+    <http://purl.org/dc/elements/1.1/language> "en" ;
+
+    <http://purl.org/dc/elements/1.1/title>
+        "The Multilingual Morpheme Ontology"@en ;
+
+    <http://purl.org/dc/terms/license>
+        <https://creativecommons.org/licenses/by/4.0/> ;
+
+    rdfs:label
+        "Multilingual Morpheme Ontology"@en ;
+
+    owl:versionInfo
+        "Version 1.0, 2016. Created and maintained by Bettina Klimek."@en .
 
 #################################################################
 #    Annotation properties

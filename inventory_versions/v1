@@ -6,28 +6,75 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix mmoon: <http://mmoon.org/core/> .
 @prefix ell_schema: <http://mmoon.org/ell/schema/omg/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
 @base <http://mmoon.org/ell/inventory/omg/> .
 
-<http://mmoon.org/ell/inventory/omg/> rdf:type owl:Ontology ;
 
-    <http://purl.org/dc/elements/1.1/description>
-        """The Multilingual Morpheme Ontology (MMoOn) is an ontological model that contains the vocabulary needed to describe the morphological elements, meanings and representations of natural languages.
+#################################################################
+#    MMoOn Core Ontology
+#################################################################
 
-This is the reference ontology from which various language specific MMoOn Inventories can be derived."""@en ;
+<http://mmoon.org/core/> rdf:type owl:Ontology ;
 
-    <http://purl.org/dc/elements/1.1/language> "en" ;
+    dc:description
+        """The Multilingual Morpheme Ontology (MMoOn) is an ontological model that contains the vocabulary needed to describe the morphological elements, meanings, and representations of natural languages.
 
-    <http://purl.org/dc/elements/1.1/title>
+This is the reference ontology from which various language-specific MMoOn inventories can be derived."""@en ;
+
+    dc:language "en" ;
+
+    dc:title
         "The Multilingual Morpheme Ontology"@en ;
-
-    <http://purl.org/dc/terms/license>
-        <https://creativecommons.org/licenses/by/4.0/> ;
 
     rdfs:label
         "Multilingual Morpheme Ontology"@en ;
 
     owl:versionInfo
         "Version 1.0, 2016. Created and maintained by Bettina Klimek."@en .
+
+
+#################################################################
+#    ELL Schema for Modern Greek
+#################################################################
+
+<http://mmoon.org/ell/schema/omg/> rdf:type owl:Ontology ;
+
+    dc:description
+        """The ELL Schema for Modern Greek is an extension of the Multilingual Morpheme Ontology (MMoOn) for representing Modern Greek morphology, with a particular focus on derivation."""@en ;
+
+    dc:language "en" ;
+
+    dc:title
+        "ELL Schema for Modern Greek"@en ;
+
+    rdfs:label
+        "ELL Schema for Modern Greek"@en ;
+
+    dcterms:license
+        <https://creativecommons.org/licenses/by/4.0/> .
+
+
+#################################################################
+#    Modern Greek MMoOn Inventory
+#################################################################
+
+<http://mmoon.org/ell/inventory/omg/> rdf:type owl:Ontology ;
+
+    dc:description
+        """The Modern Greek MMoOn Inventory contains lexical data describing morphological elements of Modern Greek according to the Multilingual Morpheme Ontology (MMoOn) and the ELL Schema for Modern Greek."""@en ;
+
+    dc:language "en" ;
+
+    dc:title
+        "Modern Greek MMoOn Inventory"@en ;
+
+    rdfs:label
+        "Modern Greek MMoOn Inventory"@en ;
+
+    dcterms:license
+        <https://creativecommons.org/licenses/by/4.0/> .
 
 #################################################################
 #    Annotation properties

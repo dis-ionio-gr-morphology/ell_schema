@@ -1,80 +1,30 @@
 @prefix : <http://mmoon.org/ell/inventory/omg/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix mmoon: <http://mmoon.org/core/> .
-@prefix ell_schema: <http://mmoon.org/ell/schema/omg/> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-
+@prefix ell_schema: <http://mmoon.org/ell/schema/omg/> .
 @base <http://mmoon.org/ell/inventory/omg/> .
 
-
-#################################################################
-#    MMoOn Core Ontology
-#################################################################
-
 <http://mmoon.org/core/> rdf:type owl:Ontology ;
-
-    dc:description
-        """The Multilingual Morpheme Ontology (MMoOn) is an ontological model that contains the vocabulary needed to describe the morphological elements, meanings, and representations of natural languages.
+                          dc:description "The ELL Schema for Modern Greek is an extension of the Multilingual Morpheme Ontology (MMoOn) for representing Modern Greek morphology, with a particular focus on derivation."@en ,
+                                         "The Modern Greek MMoOn Inventory contains pattern-based and lexical data describing morphological elements of Modern Greek according to the Multilingual Morpheme Ontology (MMoOn) and the ELL Schema for Modern Greek."@en ,
+                                         """The Multilingual Morpheme Ontology (MMoOn) is an ontological model that contains the vocabulary needed to describe the morphological elements, meanings, and representations of natural languages.
 
 This is the reference ontology from which various language-specific MMoOn inventories can be derived."""@en ;
-
-    dc:language "en" ;
-
-    dc:title
-        "The Multilingual Morpheme Ontology"@en ;
-
-    rdfs:label
-        "Multilingual Morpheme Ontology"@en ;
-
-    owl:versionInfo
-        "Version 1.0, 2016. Created and maintained by Bettina Klimek."@en .
-
-
-#################################################################
-#    ELL Schema for Modern Greek
-#################################################################
-
-<http://mmoon.org/ell/schema/omg/> rdf:type owl:Ontology ;
-
-    dc:description
-        """The ELL Schema for Modern Greek is an extension of the Multilingual Morpheme Ontology (MMoOn) for representing Modern Greek morphology, with a particular focus on derivation."""@en ;
-
-    dc:language "en" ;
-
-    dc:title
-        "ELL Schema for Modern Greek"@en ;
-
-    rdfs:label
-        "ELL Schema for Modern Greek"@en ;
-
-    dcterms:license
-        <https://creativecommons.org/licenses/by/4.0/> .
-
-
-#################################################################
-#    Modern Greek MMoOn Inventory
-#################################################################
-
-<http://mmoon.org/ell/inventory/omg/> rdf:type owl:Ontology ;
-
-    dc:description
-        """The Modern Greek MMoOn Inventory contains lexical data describing morphological elements of Modern Greek according to the Multilingual Morpheme Ontology (MMoOn) and the ELL Schema for Modern Greek."""@en ;
-
-    dc:language "en" ;
-
-    dc:title
-        "Modern Greek MMoOn Inventory"@en ;
-
-    rdfs:label
-        "Modern Greek MMoOn Inventory"@en ;
-
-    dcterms:license
-        <https://creativecommons.org/licenses/by/4.0/> .
+                          dc:language "en" ;
+                          dc:title "ELL Schema for Modern Greek"@en ,
+                                   "Modern Greek MMoOn Inventory"@en ,
+                                   "The Multilingual Morpheme Ontology"@en ;
+                          dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+                          rdfs:label "ELL Schema for Modern Greek"@en ,
+                                     "Modern Greek MMoOn Inventory"@en ,
+                                     "Multilingual Morpheme Ontology"@en ;
+                          owl:versionInfo "Version 1.0, 2016. Created and maintained by Bettina Klimek."@en .
 
 #################################################################
 #    Annotation properties
@@ -109,43 +59,43 @@ mmoon:usageNote rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/contributor
-<http://purl.org/dc/elements/1.1/contributor> rdf:type owl:AnnotationProperty .
+dc:contributor rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/creator
-<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+dc:creator rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/date
-<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
+dc:date rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/description
-<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+dc:description rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/format
-<http://purl.org/dc/elements/1.1/format> rdf:type owl:AnnotationProperty .
+dc:format rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/identifier
-<http://purl.org/dc/elements/1.1/identifier> rdf:type owl:AnnotationProperty .
+dc:identifier rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/language
-<http://purl.org/dc/elements/1.1/language> rdf:type owl:AnnotationProperty .
+dc:language rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/rights
-<http://purl.org/dc/elements/1.1/rights> rdf:type owl:AnnotationProperty .
+dc:rights rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/title
-<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+dc:title rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/license
-<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+dcterms:license rdf:type owl:AnnotationProperty .
 
 
 ###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
@@ -168,12 +118,6 @@ rdfs:isDefinedBy rdfs:comment "The defininition of the subject resource." ;
 rdfs:label rdfs:comment "A human-readable name for the subject." ;
            rdfs:isDefinedBy rdfs: ;
            rdfs:label "label" .
-
-
-###  http://www.w3.org/2000/01/rdf-schema#seeAlso
-rdfs:seeAlso rdfs:comment "Further information about the subject resource." ;
-             rdfs:isDefinedBy rdfs: ;
-             rdfs:label "seeAlso" .
 
 
 ###  http://www.w3.org/2002/07/owl#versionInfo
@@ -716,7 +660,7 @@ ell_schema:followedBy rdf:type owl:ObjectProperty ;
                       rdf:type owl:TransitiveProperty ;
                       rdfs:domain ell_schema:ListItem ;
                       rdfs:range ell_schema:ListItem ;
-                      <http://purl.org/dc/elements/1.1/description> "Given the list (I[1], I[2], ... , I[i-1], I[i], I[i+1], ... , I[n-1], I[n]), the item I[i] is followed by I[i+1], ... , I[n-1] and I[n]."@en ;
+                      dc:description "Given the list (I[1], I[2], ... , I[i-1], I[i], I[i+1], ... , I[n-1], I[n]), the item I[i] is followed by I[i+1], ... , I[n-1] and I[n]."@en ;
                       rdfs:comment "The link to the following item in a list."@en ;
                       rdfs:label "is followed by"@en .
 
@@ -878,7 +822,7 @@ ell_schema:nextItem rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf ell_schema:followedBy ;
                     owl:inverseOf ell_schema:previousItem ;
                     rdf:type owl:FunctionalProperty ;
-                    <http://purl.org/dc/elements/1.1/description> "Given the list (I[1], I[2], ... , I[i-1], I[i], I[i+1], ... , I[n-1], I[n]), the next item of I[i] is I[i+1]."@en ;
+                    dc:description "Given the list (I[1], I[2], ... , I[i-1], I[i], I[i+1], ... , I[n-1], I[n]), the next item of I[i] is I[i+1]."@en ;
                     rdfs:comment "The link to the next item in a list."@en ;
                     rdfs:label "has next item"@en .
 
@@ -886,7 +830,7 @@ ell_schema:nextItem rdf:type owl:ObjectProperty ;
 ###  http://mmoon.org/ell/schema/omg/precededBy
 ell_schema:precededBy rdf:type owl:ObjectProperty ,
                                owl:TransitiveProperty ;
-                      <http://purl.org/dc/elements/1.1/description> "Given the list (I[1], I[2], ... , I[i-1], I[i], I[i+1], ... , I[n-1], I[n]), the item I[i] is preceded by I[i-1], ... , I[2] and I[1]."@en ;
+                      dc:description "Given the list (I[1], I[2], ... , I[i-1], I[i], I[i+1], ... , I[n-1], I[n]), the item I[i] is preceded by I[i-1], ... , I[2] and I[1]."@en ;
                       rdfs:comment "The link to the preceding item in a list."@en ;
                       rdfs:label "is preceded by"@en .
 
@@ -895,7 +839,7 @@ ell_schema:precededBy rdf:type owl:ObjectProperty ,
 ell_schema:previousItem rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf ell_schema:precededBy ;
                         rdf:type owl:FunctionalProperty ;
-                        <http://purl.org/dc/elements/1.1/description> "Given the list (I[1], I[2], ... , I[i-1], I[i], I[i+1], ... , I[n-1], I[n]), the previous item of I[i] is I[i-1]."@en ;
+                        dc:description "Given the list (I[1], I[2], ... , I[i-1], I[i], I[i+1], ... , I[n-1], I[n]), the previous item of I[i] is I[i-1]."@en ;
                         rdfs:comment "The link to the previous item in a list."@en ;
                         rdfs:label "has previous item"@en .
 
@@ -1006,7 +950,7 @@ ell_schema:size rdf:type owl:DatatypeProperty ,
                          owl:FunctionalProperty ;
                 rdfs:domain ell_schema:Collection ;
                 rdfs:range xsd:nonNegativeInteger ;
-                <http://purl.org/dc/elements/1.1/description> """CO defines the size of a collection as the sum of the number of times entities that are part of the collection appear in it. This means that co:size considers how much each entity is involved by a particular collection, i.e.:
+                dc:description """CO defines the size of a collection as the sum of the number of times entities that are part of the collection appear in it. This means that co:size considers how much each entity is involved by a particular collection, i.e.:
 - the size of the set {a, b, c} is three
 - the size of the bag [a, a, b, b, b, c] is five
 - the size of the list (a, b, c, b, a, b, c, c) is seven"""@en ;
@@ -1022,7 +966,7 @@ ell_schema:size rdf:type owl:DatatypeProperty ,
                                                                  owl:cardinality "0"^^xsd:nonNegativeInteger
                                                                ] ;
                                                    rdfs:range xsd:string ;
-                                                   <http://purl.org/dc/elements/1.1/description> "A data property linking a resource that contains a logical error (which results in it belonging to the class owl:Nothing, therefore making the model inconsistent) to a textual description of that error."@en ;
+                                                   dc:description "A data property linking a resource that contains a logical error (which results in it belonging to the class owl:Nothing, therefore making the model inconsistent) to a textual description of that error."@en ;
                                                    rdfs:comment "It describes in some way, usually in natural language, which kind of error results from this resource."@en ;
                                                    rdfs:label "has error"@en .
 
@@ -6733,7 +6677,7 @@ owl:Thing rdfs:comment "The class of OWL individuals." ;
                    ell_schema:StemPattern ;
           ell_schema:consistsOfDerSuf :_-τή-AL1_1_1 ;
           ell_schema:consistsOfStemPattern :X-ευ2- ;
-          ell_schema:isMappedTo :χορ-ευ-AL2_1_1_-τή-AL1_1_1 .
+          ell_schema:isMappedTo :χορ-_-ευ-AL2_1_1_-τή-AL1_1_1 .
 
 
 ###  http://mmoon.org/ell/inventory/omg/X-ευ-τή-ς
@@ -6754,7 +6698,7 @@ owl:Thing rdfs:comment "The class of OWL individuals." ;
                                             :X-ισ-τή- ,
                                             :X-ω-τή- ,
                                             :vX2φ ;
-           ell_schema:isMappedTo :χορ-ευ-AL2_1_1_-τή-AL1_1_1__-ς ;
+           ell_schema:isMappedTo :χορ-_-ευ-AL2_1_1_-τή-AL1_1_1__-ς ;
            ell_schema:item :X-ευ-τή-ς_i0 ,
                            :X-ευ-τή-ς_i1 ,
                            :X-ευ-τή-ς_i2 ,
@@ -6807,7 +6751,7 @@ owl:Thing rdfs:comment "The class of OWL individuals." ;
         mmoon:isAllomorphTo :X-εύ1- ;
         ell_schema:consistsOfDerSuf :_-ευ-AL2_1_1 ;
         ell_schema:consistsOfStemPattern :nX1.1 ;
-        ell_schema:isMappedTo :χορ-ευ-AL2_1_1 .
+        ell_schema:isMappedTo :χορ-_-ευ-AL2_1_1 .
 
 
 ###  http://mmoon.org/ell/inventory/omg/X-εύ-ω
@@ -6831,7 +6775,7 @@ owl:Thing rdfs:comment "The class of OWL individuals." ;
         ell_schema:belongsToAllomParadigm :VAllomParadigm2 ;
         ell_schema:consistsOfDerSuf :_-εύ-AL1_1_1 ;
         ell_schema:consistsOfStemPattern :nX1.1 ;
-        ell_schema:isMappedTo :χορ-εύ-AL1_1_1 .
+        ell_schema:isMappedTo :χορ-_-εύ-AL1_1_1 .
 
 
 ###  http://mmoon.org/ell/inventory/omg/X-ικ-
@@ -6856,7 +6800,7 @@ owl:Thing rdfs:comment "The class of OWL individuals." ;
        mmoon:hasMeaning :_verb ;
        ell_schema:consistsOfDerSuf :_-ισ-AL2_1_1 ;
        ell_schema:consistsOfStemPattern :nX1.2 ;
-       ell_schema:isMappedTo :ρυθμ-ισ-AL2_1_1 .
+       ell_schema:isMappedTo :ρυθμ-_-ισ-AL2_1_1 .
 
 
 ###  http://mmoon.org/ell/inventory/omg/X-ισ-ση-
@@ -6889,7 +6833,7 @@ owl:Thing rdfs:comment "The class of OWL individuals." ;
                            :_noun ;
           ell_schema:consistsOfDerSuf :_-τή-AL1_1_1 ;
           ell_schema:consistsOfStemPattern :X-ισ- ;
-          ell_schema:isMappedTo :ρυθμ-ισ-AL2_1_1_-τή-AL1_1_1 .
+          ell_schema:isMappedTo :ρυθμ-_-ισ-AL2_1_1_-τή-AL1_1_1 .
 
 
 ###  http://mmoon.org/ell/inventory/omg/X-ισ-τή-ς
@@ -11761,44 +11705,44 @@ owl:Thing rdfs:comment "The class of OWL individuals." ;
        mmoon:orthographicRepresentation "ρυθμ" .
 
 
-###  http://mmoon.org/ell/inventory/omg/ρυθμ-ίζ-AL1_1_1
-:ρυθμ-ίζ-AL1_1_1 rdf:type owl:NamedIndividual ,
-                          mmoon:Stem ;
-                 mmoon:consistsOfStem :ρυθμ- ;
-                 ell_schema:consistsOfDerSuf :_-ίζ-AL1_1_1 ;
-                 ell_schema:hasBase :b_rhythm ;
-                 ell_schema:isMappedTo :X-ίζ- ;
-                 mmoon:orthographicRepresentation "ρυθμίζ" .
+###  http://mmoon.org/ell/inventory/omg/ρυθμ-_-ίζ-AL1_1_1
+:ρυθμ-_-ίζ-AL1_1_1 rdf:type owl:NamedIndividual ,
+                            mmoon:Stem ;
+                   mmoon:consistsOfStem :ρυθμ- ;
+                   ell_schema:consistsOfDerSuf :_-ίζ-AL1_1_1 ;
+                   ell_schema:hasBase :b_rhythm ;
+                   ell_schema:isMappedTo :X-ίζ- ;
+                   mmoon:orthographicRepresentation "ρυθμίζ" .
 
 
-###  http://mmoon.org/ell/inventory/omg/ρυθμ-ισ-AL2_1_1
-:ρυθμ-ισ-AL2_1_1 rdf:type owl:NamedIndividual ,
-                          mmoon:Stem ;
-                 mmoon:consistsOfStem :ρυθμ- ;
-                 ell_schema:consistsOfDerSuf :_-ισ-AL2_1_1 ;
-                 ell_schema:hasBase :b_rhythm ;
-                 ell_schema:isMappedTo :X-ισ- ;
-                 mmoon:orthographicRepresentation "ρυθμισ" .
+###  http://mmoon.org/ell/inventory/omg/ρυθμ-_-ισ-AL2_1_1
+:ρυθμ-_-ισ-AL2_1_1 rdf:type owl:NamedIndividual ,
+                            mmoon:Stem ;
+                   mmoon:consistsOfStem :ρυθμ- ;
+                   ell_schema:consistsOfDerSuf :_-ισ-AL2_1_1 ;
+                   ell_schema:hasBase :b_rhythm ;
+                   ell_schema:isMappedTo :X-ισ- ;
+                   mmoon:orthographicRepresentation "ρυθμισ" .
 
 
-###  http://mmoon.org/ell/inventory/omg/ρυθμ-ισ-AL2_1_1_-τ-AL3_1_1
-:ρυθμ-ισ-AL2_1_1_-τ-AL3_1_1 rdf:type owl:NamedIndividual ,
-                                     mmoon:Stem ;
-                            mmoon:consistsOfStem :ρυθμ-ισ-AL2_1_1 ;
-                            ell_schema:consistsOfDerSuf :_-τ-AL3_1_1 ;
-                            ell_schema:hasBase :b_rhythm ;
-                            ell_schema:isMappedTo :X-ισ-τ- ;
-                            mmoon:orthographicRepresentation "ρυθμιστ" .
+###  http://mmoon.org/ell/inventory/omg/ρυθμ-_-ισ-AL2_1_1_-τ-AL3_1_1
+:ρυθμ-_-ισ-AL2_1_1_-τ-AL3_1_1 rdf:type owl:NamedIndividual ,
+                                       mmoon:Stem ;
+                              mmoon:consistsOfStem :ρυθμ-_-ισ-AL2_1_1 ;
+                              ell_schema:consistsOfDerSuf :_-τ-AL3_1_1 ;
+                              ell_schema:hasBase :b_rhythm ;
+                              ell_schema:isMappedTo :X-ισ-τ- ;
+                              mmoon:orthographicRepresentation "ρυθμιστ" .
 
 
-###  http://mmoon.org/ell/inventory/omg/ρυθμ-ισ-AL2_1_1_-τή-AL1_1_1
-:ρυθμ-ισ-AL2_1_1_-τή-AL1_1_1 rdf:type owl:NamedIndividual ,
-                                      mmoon:Stem ;
-                             mmoon:consistsOfStem :ρυθμ-ισ-AL2_1_1 ;
-                             ell_schema:consistsOfDerSuf :_-τή-AL1_1_1 ;
-                             ell_schema:hasBase :b_rhythm ;
-                             ell_schema:isMappedTo :X-ισ-τή- ;
-                             mmoon:orthographicRepresentation "ρυθμιστή" .
+###  http://mmoon.org/ell/inventory/omg/ρυθμ-_-ισ-AL2_1_1_-τή-AL1_1_1
+:ρυθμ-_-ισ-AL2_1_1_-τή-AL1_1_1 rdf:type owl:NamedIndividual ,
+                                        mmoon:Stem ;
+                               mmoon:consistsOfStem :ρυθμ-_-ισ-AL2_1_1 ;
+                               ell_schema:consistsOfDerSuf :_-τή-AL1_1_1 ;
+                               ell_schema:hasBase :b_rhythm ;
+                               ell_schema:isMappedTo :X-ισ-τή- ;
+                               mmoon:orthographicRepresentation "ρυθμιστή" .
 
 
 ###  http://mmoon.org/ell/inventory/omg/χορ-
@@ -11808,65 +11752,65 @@ owl:Thing rdfs:comment "The class of OWL individuals." ;
       mmoon:orthographicRepresentation "χορ" .
 
 
-###  http://mmoon.org/ell/inventory/omg/χορ-ευ-AL2_1_1
-:χορ-ευ-AL2_1_1 rdf:type owl:NamedIndividual ,
-                         mmoon:Stem ;
-                mmoon:consistsOfStem :χορ- ;
-                ell_schema:consistsOfDerSuf :_-ευ-AL2_1_1 ;
-                ell_schema:hasBase :b_xor ;
-                ell_schema:isMappedTo :X-ευ2- ;
-                mmoon:orthographicRepresentation "χορευ" .
+###  http://mmoon.org/ell/inventory/omg/χορ-_-ευ-AL2_1_1
+:χορ-_-ευ-AL2_1_1 rdf:type owl:NamedIndividual ,
+                           mmoon:Stem ;
+                  mmoon:consistsOfStem :χορ- ;
+                  ell_schema:consistsOfDerSuf :_-ευ-AL2_1_1 ;
+                  ell_schema:hasBase :b_xor ;
+                  ell_schema:isMappedTo :X-ευ2- ;
+                  mmoon:orthographicRepresentation "χορευ" .
 
 
-###  http://mmoon.org/ell/inventory/omg/χορ-ευ-AL2_1_1_-τ-AL3_1_1
-:χορ-ευ-AL2_1_1_-τ-AL3_1_1 rdf:type owl:NamedIndividual ,
-                                    mmoon:Stem ;
-                           mmoon:consistsOfStem :χορ-ευ-AL2_1_1 ;
-                           ell_schema:consistsOfDerSuf :_-τ-AL3_1_1 ;
-                           ell_schema:hasBase :b_xor ;
-                           ell_schema:isMappedTo :X-ευ-τ- ;
-                           mmoon:orthographicRepresentation "χορευτ" .
+###  http://mmoon.org/ell/inventory/omg/χορ-_-ευ-AL2_1_1_-τ-AL3_1_1
+:χορ-_-ευ-AL2_1_1_-τ-AL3_1_1 rdf:type owl:NamedIndividual ,
+                                      mmoon:Stem ;
+                             mmoon:consistsOfStem :χορ-_-ευ-AL2_1_1 ;
+                             ell_schema:consistsOfDerSuf :_-τ-AL3_1_1 ;
+                             ell_schema:hasBase :b_xor ;
+                             ell_schema:isMappedTo :X-ευ-τ- ;
+                             mmoon:orthographicRepresentation "χορευτ" .
 
 
-###  http://mmoon.org/ell/inventory/omg/χορ-ευ-AL2_1_1_-τή-AL1_1_1
-:χορ-ευ-AL2_1_1_-τή-AL1_1_1 rdf:type owl:NamedIndividual ,
-                                     mmoon:Stem ;
-                            mmoon:consistsOfStem :χορ-ευ-AL2_1_1 ;
-                            ell_schema:consistsOfDerSuf :_-τή-AL1_1_1 ;
-                            ell_schema:hasBase :b_xor ;
-                            ell_schema:isMappedTo :X-ευ-τή- ;
-                            mmoon:orthographicRepresentation "χορευτή" .
-
-
-###  http://mmoon.org/ell/inventory/omg/χορ-ευ-AL2_1_1_-τή-AL1_1_1__-ς
-:χορ-ευ-AL2_1_1_-τή-AL1_1_1__-ς rdf:type owl:NamedIndividual ,
-                                         mmoon:Word ;
-                                mmoon:consistsOfStem :χορ-ευ-AL2_1_1_-τή-AL1_1_1 ;
-                                ell_schema:consistsOfInfSuf :_-ς ;
-                                ell_schema:hasBase :b_xor ;
-                                ell_schema:isMappedTo :X-ευ-τή-ς ;
-                                mmoon:orthographicRepresentation "χορευτής" .
-
-
-###  http://mmoon.org/ell/inventory/omg/χορ-εύ-AL1_1_1
-:χορ-εύ-AL1_1_1 rdf:type owl:NamedIndividual ,
-                         mmoon:Stem ;
-                mmoon:consistsOfStem :χορ- ;
-                ell_schema:consistsOfDerSuf :_-εύ-AL1_1_1 ;
-                ell_schema:hasBase :b_xor ;
-                ell_schema:isMappedTo :X-εύ1- ;
-                mmoon:orthographicRepresentation "χορεύ" .
-
-
-###  http://mmoon.org/ell/inventory/omg/χορ-εύ-AL1_1_1__-ωIS_AL1_1_1
-:χορ-εύ-AL1_1_1__-ωIS_AL1_1_1 rdf:type owl:NamedIndividual ,
-                                       mmoon:Word ;
-                              mmoon:consistsOfStem :χορ-εύ-AL1_1_1 ;
-                              ell_schema:consistsOfInfSuf :_-ωIS_AL1_1_1 ;
-                              ell_schema:generates :χορ-ευ-AL2_1_1_-τή-AL1_1_1__-ς ;
+###  http://mmoon.org/ell/inventory/omg/χορ-_-ευ-AL2_1_1_-τή-AL1_1_1
+:χορ-_-ευ-AL2_1_1_-τή-AL1_1_1 rdf:type owl:NamedIndividual ,
+                                       mmoon:Stem ;
+                              mmoon:consistsOfStem :χορ-_-ευ-AL2_1_1 ;
+                              ell_schema:consistsOfDerSuf :_-τή-AL1_1_1 ;
                               ell_schema:hasBase :b_xor ;
-                              ell_schema:isMappedTo :X-εύ-ω ;
-                              mmoon:orthographicRepresentation "χορεύω" .
+                              ell_schema:isMappedTo :X-ευ-τή- ;
+                              mmoon:orthographicRepresentation "χορευτή" .
+
+
+###  http://mmoon.org/ell/inventory/omg/χορ-_-ευ-AL2_1_1_-τή-AL1_1_1__-ς
+:χορ-_-ευ-AL2_1_1_-τή-AL1_1_1__-ς rdf:type owl:NamedIndividual ,
+                                           mmoon:Word ;
+                                  mmoon:consistsOfStem :χορ-_-ευ-AL2_1_1_-τή-AL1_1_1 ;
+                                  ell_schema:consistsOfInfSuf :_-ς ;
+                                  ell_schema:hasBase :b_xor ;
+                                  ell_schema:isMappedTo :X-ευ-τή-ς ;
+                                  mmoon:orthographicRepresentation "χορευτής" .
+
+
+###  http://mmoon.org/ell/inventory/omg/χορ-_-εύ-AL1_1_1
+:χορ-_-εύ-AL1_1_1 rdf:type owl:NamedIndividual ,
+                           mmoon:Stem ;
+                  mmoon:consistsOfStem :χορ- ;
+                  ell_schema:consistsOfDerSuf :_-εύ-AL1_1_1 ;
+                  ell_schema:hasBase :b_xor ;
+                  ell_schema:isMappedTo :X-εύ1- ;
+                  mmoon:orthographicRepresentation "χορεύ" .
+
+
+###  http://mmoon.org/ell/inventory/omg/χορ-_-εύ-AL1_1_1_-ωIS_AL1_1_1
+:χορ-_-εύ-AL1_1_1_-ωIS_AL1_1_1 rdf:type owl:NamedIndividual ,
+                                        mmoon:Word ;
+                               mmoon:consistsOfStem :χορ-_-εύ-AL1_1_1 ;
+                               ell_schema:consistsOfInfSuf :_-ωIS_AL1_1_1 ;
+                               ell_schema:generates :χορ-_-ευ-AL2_1_1_-τή-AL1_1_1__-ς ;
+                               ell_schema:hasBase :b_xor ;
+                               ell_schema:isMappedTo :X-εύ-ω ;
+                               mmoon:orthographicRepresentation "χορεύω" .
 
 
 ###  http://mmoon.org/ell/inventory/omg/χορός
@@ -11884,6 +11828,11 @@ owl:Thing rdfs:comment "The class of OWL individuals." ;
 rdf:nil rdfs:comment "The empty list, with no items in it. If the rest of a list is nil then the list has no more items in it." ;
         rdfs:isDefinedBy rdf: ;
         rdfs:label "nil" .
+
+
+rdfs:seeAlso rdfs:comment "Further information about the subject resource." ;
+             rdfs:isDefinedBy rdfs: ;
+             rdfs:label "seeAlso" .
 
 
 owl:backwardCompatibleWith rdfs:comment "The annotation property that indicates that a given ontology is backward compatible with another ontology." ;

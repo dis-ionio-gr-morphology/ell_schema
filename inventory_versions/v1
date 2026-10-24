@@ -6115,6 +6115,16 @@ owl:Thing rdfs:comment "The class of OWL individuals." ;
 #    Individuals
 #################################################################
 
+###  http://mmoon.org/core/ρυθμ-_-ίζ-AL1_1_1_-ωIS_AL1_1_1
+mmoon:ρυθμ-_-ίζ-AL1_1_1_-ωIS_AL1_1_1 rdf:type owl:NamedIndividual ,
+                                              mmoon:Word ;
+                                     mmoon:consistsOfStem :ρυθμ-_-ίζ-AL1_1_1 ;
+                                     ell_schema:consistsOfInfSuf :_-ωIS_AL1_1_1 ;
+                                     ell_schema:hasBase :b_rhythm ;
+                                     ell_schema:isMappedTo :X-ίζ-ω ;
+                                     mmoon:orthographicRepresentation "ρυθμίζω" .
+
+
 ###  http://mmoon.org/ell/inventory/omg/Rep_ευ-1
 :Rep_ευ-1 rdf:type owl:NamedIndividual ,
                    mmoon:Representation ;
@@ -6610,9 +6620,12 @@ owl:Thing rdfs:comment "The class of OWL individuals." ;
 ###  http://mmoon.org/ell/inventory/omg/X-έ-
 :X-έ- rdf:type owl:NamedIndividual ,
                ell_schema:StemPattern ;
-      mmoon:isAllomorphTo :X-εύ1- ;
+      mmoon:isAllomorphTo :X-ευ2- ,
+                          :X-εύ1- ;
       ell_schema:belongsToAllomParadigm :VAllomParadigm2 ;
-      ell_schema:consistsOfDerSuf :_-έ-AL5_1_1 .
+      ell_schema:consistsOfDerSuf :_-έ-AL5_1_1 ;
+      ell_schema:consistsOfStemPattern :nX1.1 ;
+      ell_schema:isMappedTo :χορ-_-έ-AL5_1_1 .
 
 
 ###  http://mmoon.org/ell/inventory/omg/X-ή-zInfSuf_X-ικ-ός
@@ -6694,10 +6707,7 @@ owl:Thing rdfs:comment "The class of OWL individuals." ;
                             :_masculine ,
                             :_noun ;
            ell_schema:consistsOfInfSuf :_-ς ;
-           ell_schema:consistsOfStemPattern :X-ευ-τή- ,
-                                            :X-ισ-τή- ,
-                                            :X-ω-τή- ,
-                                            :vX2φ ;
+           ell_schema:consistsOfStemPattern :X-ευ-τή- ;
            ell_schema:isMappedTo :χορ-_-ευ-AL2_1_1_-τή-AL1_1_1__-ς ;
            ell_schema:item :X-ευ-τή-ς_i0 ,
                            :X-ευ-τή-ς_i1 ,
@@ -6748,7 +6758,9 @@ owl:Thing rdfs:comment "The class of OWL individuals." ;
 ###  http://mmoon.org/ell/inventory/omg/X-ευ2-
 :X-ευ2- rdf:type owl:NamedIndividual ,
                  ell_schema:StemPattern ;
-        mmoon:isAllomorphTo :X-εύ1- ;
+        mmoon:isAllomorphTo :X-έ- ,
+                            :X-εύ1- ;
+        ell_schema:belongsToAllomParadigm :VAllomParadigm2 ;
         ell_schema:consistsOfDerSuf :_-ευ-AL2_1_1 ;
         ell_schema:consistsOfStemPattern :nX1.1 ;
         ell_schema:isMappedTo :χορ-_-ευ-AL2_1_1 .
@@ -6772,6 +6784,8 @@ owl:Thing rdfs:comment "The class of OWL individuals." ;
 ###  http://mmoon.org/ell/inventory/omg/X-εύ1-
 :X-εύ1- rdf:type owl:NamedIndividual ,
                  ell_schema:StemPattern ;
+        mmoon:isAllomorphTo :X-έ- ,
+                            :X-ευ2- ;
         ell_schema:belongsToAllomParadigm :VAllomParadigm2 ;
         ell_schema:consistsOfDerSuf :_-εύ-AL1_1_1 ;
         ell_schema:consistsOfStemPattern :nX1.1 ;
@@ -10281,15 +10295,15 @@ owl:Thing rdfs:comment "The class of OWL individuals." ;
                    mmoon:orthographicRepresentation "διακρίν" .
 
 
-###  http://mmoon.org/ell/inventory/omg/_δια-AL2_1_1κρίν-__-ωIS_AL1_1_1
-:_δια-AL2_1_1κρίν-__-ωIS_AL1_1_1 rdf:type owl:NamedIndividual ,
-                                          mmoon:Word ;
-                                 mmoon:consistsOfStem :_δια-AL2_1_1κρίν- ;
-                                 ell_schema:consistsOfInfSuf :_-ωIS_AL1_1_1 ;
-                                 ell_schema:hasBase :b_krin ;
-                                 ell_schema:isMappedTo :δια-X-ω ;
-                                 ell_schema:relatesTo :prefixation ;
-                                 mmoon:orthographicRepresentation "διακρίνω" .
+###  http://mmoon.org/ell/inventory/omg/_δια-AL2_1_1κρίν-_-ωIS_AL1_1_1
+:_δια-AL2_1_1κρίν-_-ωIS_AL1_1_1 rdf:type owl:NamedIndividual ,
+                                         mmoon:Word ;
+                                mmoon:consistsOfStem :_δια-AL2_1_1κρίν- ;
+                                ell_schema:consistsOfInfSuf :_-ωIS_AL1_1_1 ;
+                                ell_schema:hasBase :b_krin ;
+                                ell_schema:isMappedTo :δια-X-ω ;
+                                ell_schema:relatesTo :prefixation ;
+                                mmoon:orthographicRepresentation "διακρίνω" .
 
 
 ###  http://mmoon.org/ell/inventory/omg/_δια-AL2_1_1κρι-
@@ -11423,7 +11437,8 @@ owl:Thing rdfs:comment "The class of OWL individuals." ;
 
 ###  http://mmoon.org/ell/inventory/omg/vX11ν
 :vX11ν rdf:type owl:NamedIndividual ,
-                ell_schema:StemPattern .
+                ell_schema:StemPattern ;
+       ell_schema:isMappedTo :κρίν- .
 
 
 ###  http://mmoon.org/ell/inventory/omg/vX1ή
@@ -11651,7 +11666,7 @@ owl:Thing rdfs:comment "The class of OWL individuals." ;
                   ell_schema:WordPattern ;
          ell_schema:consistsOfInfSuf :_-ωIS_AL1_1_1 ;
          ell_schema:consistsOfStemOfAWordPattern :δια-vX11v- ;
-         ell_schema:isMappedTo :_δια-AL2_1_1κρίν-__-ωIS_AL1_1_1 .
+         ell_schema:isMappedTo :_δια-AL2_1_1κρίν-_-ωIS_AL1_1_1 .
 
 
 ###  http://mmoon.org/ell/inventory/omg/δια-X-ω_δια-X-τικός
@@ -11676,6 +11691,14 @@ owl:Thing rdfs:comment "The class of OWL individuals." ;
             ell_schema:consistsOfDerPref :_δια-AL2_1_1 ;
             ell_schema:consistsOfStemPattern :vX11ν ;
             ell_schema:isMappedTo :_δια-AL2_1_1κρίν- .
+
+
+###  http://mmoon.org/ell/inventory/omg/κρίν-
+:κρίν- rdf:type owl:NamedIndividual ,
+                mmoon:Stem ;
+       ell_schema:hasBase :b_krin ;
+       ell_schema:isMappedTo :vX11ν ;
+       mmoon:orthographicRepresentation "κρίν" .
 
 
 ###  http://mmoon.org/ell/inventory/omg/ο-comp
@@ -11745,11 +11768,31 @@ owl:Thing rdfs:comment "The class of OWL individuals." ;
                                mmoon:orthographicRepresentation "ρυθμιστή" .
 
 
+###  http://mmoon.org/ell/inventory/omg/ρυθμ-_-ισ-AL2_1_1_-τή-AL1_1_1_-ς
+:ρυθμ-_-ισ-AL2_1_1_-τή-AL1_1_1_-ς rdf:type owl:NamedIndividual ,
+                                           mmoon:Word ;
+                                  mmoon:consistsOfStem :ρυθμ-_-ισ-AL2_1_1_-τή-AL1_1_1 ;
+                                  ell_schema:consistsOfInfSuf :_-ς ;
+                                  ell_schema:hasBase :b_rhythm ;
+                                  ell_schema:isMappedTo :X-ισ-τή-ς ;
+                                  mmoon:orthographicRepresentation "ρυθμιστής" .
+
+
 ###  http://mmoon.org/ell/inventory/omg/χορ-
 :χορ- rdf:type owl:NamedIndividual ,
                ell_schema:Base ;
       ell_schema:hasBase :b_xor ;
       mmoon:orthographicRepresentation "χορ" .
+
+
+###  http://mmoon.org/ell/inventory/omg/χορ-_-έ-AL5_1_1
+:χορ-_-έ-AL5_1_1 rdf:type owl:NamedIndividual ,
+                          mmoon:Stem ;
+                 mmoon:consistsOfStem :χορ- ;
+                 ell_schema:consistsOfDerSuf :_-έ-AL5_1_1 ;
+                 ell_schema:hasBase :b_xor ;
+                 ell_schema:isMappedTo :X-έ- ;
+                 mmoon:orthographicRepresentation "χορέ" .
 
 
 ###  http://mmoon.org/ell/inventory/omg/χορ-_-ευ-AL2_1_1
